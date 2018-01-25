@@ -1,0 +1,31 @@
+{
+  "name": "auth-nodejs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "atob": "^2.0.3",
+    "aws-sdk": "^2.186.0",
+    "bcrypt": "^1.0.3",
+    "body-parser": "~1.18.2",
+    "btoa": "^1.1.2",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "firebase-admin": "^5.8.1",
+    "google-libphonenumber": "^3.0.10",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.1.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^5.0.1",
+    "mongoose-auto-increment": "^5.0.1",
+    "mongoose-deep-populate": "^3.0.0",
+    "morgan": "~1.9.0",
+    "ms": "^2.1.1",
+    "serve-favicon": "~2.4.5"
+  }
+}
