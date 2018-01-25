@@ -31,23 +31,6 @@ module.exports = {
     checkTokenStrict: checkTokenStrict,
 };
 
-function sendFcm(req, res, next) {
-    var token = req.query.token || req.body.token;
-    if (token && req.body && req.body.topic && req.body.payload) {
-        publishFCMOnTopic(req.body.topic, req.body.payload)
-            .then(result => {
-                console.log("FCM sent to : " + req.body.topic);
-                res.send({ message: "Fcm sent successfully!", data: result });
-            })
-            .catch(err => {
-                console.log("Send Fcm Error!" + err);
-                res.status(400).send({ message: "Fcm Error!", data: err });
-            });
-    } else {
-        res.status(400).send({ message: 'Invalid FCM data!' })
-    }
-}
-
 function createUser(req, res, next) {
     var token = req.query.token || req.body.token;
     if (token && req.body && req.body.phone) {
